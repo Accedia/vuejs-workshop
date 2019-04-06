@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>VueJS Demo</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      {{ message }}
+      <br />
+      <button v-on:click="changeMessage">Change</button>
+    </div>
+
+    <script type="text/javascript">
+      const app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue!'
+        },
+        methods: {
+          changeMessage: function() {
+            this.message = 'Changed!';
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
