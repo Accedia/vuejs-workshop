@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "reflect-metadata": "^0.1.13",
     "vue": "^2.6.6",
     "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^8.0.0"
+    "vue-property-decorator": "^8.0.0",
+    "vue-typedi": "^1.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
