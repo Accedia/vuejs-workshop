@@ -10,7 +10,9 @@
     <multi-component></multi-component> -->
 
     <!-- <interpolation-component></interpolation-component> -->
-    <conditional-rendering-component></conditional-rendering-component>
+    <!-- <conditional-rendering-component></conditional-rendering-component> -->
+    <!-- <loops-component></loops-component> -->
+    <styling-component></styling-component>
   </div>
 </template>
 
@@ -24,6 +26,8 @@ import MultiComponent from './components/multi-file/MultiFile';
 
 import InterpolationComponent from './components/templates-demo/Interpolation.vue';
 import ConditionalRenderingComponent from './components/templates-demo/ConditionalRendering.vue';
+import LoopsComponent from './components/templates-demo/Loops.vue';
+import StylingComponent from './components/templates-demo/Styling.vue';
 
 @Component({
   components: {
@@ -33,6 +37,8 @@ import ConditionalRenderingComponent from './components/templates-demo/Condition
     MultiComponent,
     InterpolationComponent,
     ConditionalRenderingComponent,
+    LoopsComponent,
+    StylingComponent,
   },
 })
 export default class App extends Vue {}
