@@ -9,10 +9,10 @@
     </inline-template-component>
     <multi-component></multi-component> -->
 
-    <!-- <interpolation-component></interpolation-component> -->
+    <interpolation-component></interpolation-component>
     <!-- <conditional-rendering-component></conditional-rendering-component> -->
     <!-- <loops-component></loops-component> -->
-    <styling-component></styling-component>
+    <!-- <styling-component></styling-component> -->
   </div>
 </template>
 

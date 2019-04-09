@@ -7,13 +7,19 @@
   <div>The method says: {{ getMessage() }}</div>
 
   <div>The sum of {{ a }} and {{ b }} is {{ sum }}</div>
+
+  <div>This text is capitalized: {{ 'some random text' | capitalize }}</div>
 </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  filters: {
+    capitalize: (value: string) => value.toUpperCase(),
+  },
+})
 export default class InterpolationComponent extends Vue {
   private text: string = 'A sample text';
   private a: number = 10;
