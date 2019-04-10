@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <!-- <single-file-component></single-file-component>
+    <single-file-component></single-file-component>
     <react-component></react-component>
     <inline-template-component inline-template>
       <div class="container">
         {{ message }}
       </div>
     </inline-template-component>
-    <multi-component></multi-component> -->
+    <multi-component></multi-component>
 
-    <interpolation-component></interpolation-component>
+    <!-- <interpolation-component></interpolation-component> -->
     <!-- <conditional-rendering-component></conditional-rendering-component> -->
     <!-- <loops-component></loops-component> -->
     <!-- <styling-component></styling-component> -->

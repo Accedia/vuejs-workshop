@@ -7,7 +7,7 @@
     odd
   </span>
   <span v-else>
-    zero
+    negative
   </span>
 
   <div v-if="showElement">This one is hidden</div>
