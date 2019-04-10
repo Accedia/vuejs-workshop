@@ -12,6 +12,7 @@ import { LoggerService } from './services/LoggerService';
 import { PostsService } from './services/PostsService';
 // Models
 import { Post } from './models/Post';
+import { IPostsService, IPostsToken } from './services/IPostsService';
 
 @Component
 export default class App extends Vue {
@@ -19,8 +20,8 @@ export default class App extends Vue {
   @Inject()
   private logger!: LoggerService;
 
-  @Inject()
-  private postsService!: PostsService;
+  @Inject(IPostsToken)
+  private postsService!: IPostsService;
 
   public mounted() {
     this.logger.log('Fetching posts');

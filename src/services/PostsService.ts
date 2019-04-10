@@ -1,8 +1,9 @@
 import { Post } from '../models/Post';
 import { Service } from 'vue-typedi';
+import { IPostsService, IPostsToken } from './IPostsService';
 
-@Service()
-export class PostsService {
+@Service(IPostsToken)
+export class PostsService implements IPostsService {
 
   public getPosts(): Promise<Post[]> {
     return fetch('https://jsonplaceholder.typicode.com/posts')
