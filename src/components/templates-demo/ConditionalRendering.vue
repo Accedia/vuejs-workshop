@@ -11,6 +11,7 @@
   </span>
 
   <div v-if="showElement">This one is hidden</div>
+  <button v-on:click="showElement = !showElement">Toggle element</button>
 </div>
 </template>
 
