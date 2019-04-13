@@ -5,29 +5,22 @@
         <tr>
           <th>ID</th>
           <th>Name</th>
-          <!-- TODO - 9: Use v-if to display User email table heading element if the flag is set to true -->
-          <th>Email</th>
+          <th v-if="showEmailColumn">Email</th>
         </tr>
       </thead>
       <tbody>
-        <!-- TODO - 1: Use v-for on the table row element to iterate over the albums -->
-        <!-- TODO - 4: In the v-for definition obtain the index variable -->
-        <!-- TODO - 5: Using the above defined index variable to style each odd table row element with 'gray-table-cell' class -->
-        <tr>
-          <td>
-            <!-- TODO - 2: Display the user's ID here -->
-          </td>
-          <!-- TODO - 3: Display the user's name here -->
-          <td></td>
-          <!-- TODO - 10: Use v-if to display the user's email if the flag is set to true -->
-          <td></td>
+        <tr v-for="(user, index) in users" v-bind:key="user.email" v-bind:class="{'gray-table-cell': index % 2 === 0}">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td v-if="showEmailColumn">{{ user.email }}</td>
         </tr>
       </tbody>
     </table>
 
     <div class="padding-top-15">
-      <!-- TODO - 8: Add on click listener to trigger the toggle flag function defined in the component that will show the users emails -->
-      <!-- TODO - 9: Change the button text depending on the flag value('Hide Emails'/'Show Emails') -->
+      <button v-on:click="toggleShowEmailColumn()">
+        {{ showEmailColumn ? 'Hide Emails' : 'Show Emails' }}
+      </button>
     </div>
   </div>
 </template>
@@ -40,10 +33,12 @@ import users from './users';
 @Component
 export default class UsersComponent extends Vue {
 
-  // TODO - 6: Add boolean flag here for toggling the album titles column in the table.
+  private showEmailColumn: boolean = true;
   private users: User[] = users;
 
-  // TODO - 7: Add a function here to toggle the boolean flag value.
+  private toggleShowEmailColumn(): void {
+    this.showEmailColumn = !this.showEmailColumn;
+  }
 }
 </script>
 
