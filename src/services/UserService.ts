@@ -8,5 +8,6 @@ export class UserService {
 
   public getById(userId: number) {
     // TODO - 3: Implement the method for retrieving a user by id
+    // example: https://jsonplaceholder.typicode.com/users/1
   }
 }
