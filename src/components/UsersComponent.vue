@@ -5,12 +5,12 @@
         <tr>
           <th>ID</th>
           <th>Name</th>
-          <!-- TODO - 9: Use v-if to display User email table heading element if the flag is set to true -->
+          <!-- TODO - 10: Use v-if to display User email table heading element if the flag is set to true -->
           <th>Email</th>
         </tr>
       </thead>
       <tbody>
-        <!-- TODO - 1: Use v-for on the table row element to iterate over the albums -->
+        <!-- TODO - 1: Use v-for on the table row element to iterate over the users -->
         <!-- TODO - 4: In the v-for definition obtain the index variable -->
         <!-- TODO - 5: Using the above defined index variable to style each odd table row element with 'gray-table-cell' class -->
         <tr>
@@ -19,7 +19,7 @@
           </td>
           <!-- TODO - 3: Display the user's name here -->
           <td></td>
-          <!-- TODO - 10: Use v-if to display the user's email if the flag is set to true -->
+          <!-- TODO - 11: Use v-if to display the user's email if the flag is set to true -->
           <td></td>
         </tr>
       </tbody>
