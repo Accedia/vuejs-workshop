@@ -10,7 +10,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      redirect: 'users'
+      redirect: 'users',
     },
     {
       path: '/users',
@@ -18,7 +18,7 @@ export default new Router({
       component: Users,
     },
     {
-      path: '/users/:userId',
+      path: '/users/:userId/posts',
       name: 'posts',
       component: Posts,
     },

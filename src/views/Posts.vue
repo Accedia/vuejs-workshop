@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from 'vue-property-decorator';
 import { Post } from '@/models/Post';
 import { PostService } from '../services/PostService';
 import { Inject } from 'vue-typedi';
@@ -27,10 +27,10 @@ export default class PostsComponent extends Vue {
   private postService!: PostService;
 
   @Inject()
-  private userService!: UserService
+  private userService!: UserService;
 
   public mounted(): void {
-    const userId: number = parseInt(this.$route.params.userId);
+    const userId: number = parseInt(this.$route.params.userId, 10);
 
     this.postService.getByUser(userId)
       .then((posts) => this.posts = posts);
