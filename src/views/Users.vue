@@ -11,14 +11,19 @@
       </thead>
 
       <tbody>
-        <tr v-for="user in users" :key="user.id">
-          <td>{{ user.name }}</td>
-          <td>{{ user.username }}</td>
-          <td>{{ user.email }}</td>
+        <!-- TODO - 9: Add a row for each user. Display the following properties:
+          1. Name
+          2. Username
+          3. Email
+         -->
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
           <td>
-            <router-link :to="{ name: 'posts', params: { userId: user.id } }">
-              View posts
-            </router-link></td>
+            <!-- TODO - 10: Add a link to the page displaying all the posts
+              for the current user -->
+          </td>
         </tr>
       </tbody>
     </table>
@@ -27,7 +32,6 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import { Inject } from 'vue-typedi';
 import { User } from '../models/User';
 import { UserService } from '../services/UserService';
 
@@ -35,12 +39,11 @@ import { UserService } from '../services/UserService';
 export default class UsersComponent extends Vue {
   private users: User[] = [];
 
-  @Inject()
+  // TODO - 7: Properly inject the service
   private service!: UserService;
 
   public mounted(): void {
-    this.service.getAll()
-      .then((users) => this.users = users);
+    // TODO - 8: Retrieve all users
   }
 }
 </script>

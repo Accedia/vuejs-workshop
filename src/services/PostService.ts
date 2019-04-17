@@ -1,12 +1,8 @@
-import { Service } from 'vue-typedi';
-import { Post } from '@/models/Post';
-
-@Service()
+// TODO - 4: Make the service class injectable
 export class PostService {
   private url: string = 'https://jsonplaceholder.typicode.com/posts';
 
-  public getByUser(userId: number): Promise<Post[]> {
-    return fetch(`${this.url}?userId=${userId}`)
-      .then((response) => response.json() as Promise<Post[]>);
+  public getByUser(userId: number) {
+    // TODO - 5: Implement the method for retrieving all posts by user by
   }
 }
