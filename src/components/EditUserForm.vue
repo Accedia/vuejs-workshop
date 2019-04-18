@@ -51,7 +51,7 @@ export default class EditUserForm extends Vue {
 
   @Emit('cancel')
   private cancel() {
-    return;
+    return null;
   }
 }
 </script>
