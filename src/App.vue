@@ -59,7 +59,7 @@ export default class App extends Vue {
    */
 
   private editUserDetails(updatedUser: User) {
-    this.users = this.users.map(user => (user.id === updatedUser.id) ? updatedUser : user);
+    this.users = this.users.map((user) => (user.id === updatedUser.id) ? updatedUser : user);
   }
 
   private cancelEdit() {
