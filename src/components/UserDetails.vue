@@ -4,8 +4,7 @@
     <td>{{name}}</td>
     <td>{{email}}</td>
     <td>
-      <!-- Todo - 5: Add a click event listener on the button that will call the `editUser` function -->
-      <button>Edit</button>
+      <button @click="editUser">Edit</button>
     </td>
   </tr>
 </template>
@@ -15,11 +14,14 @@ import { Vue, Component, Prop, Emit } from 'vue-property-decorator';
 
 @Component
 export default class UserDetails extends Vue {
-  // Todo - 3: Use @Prop to define the input props for this component: id (number), name (string) and email (string)
+  @Prop() private id!: number;
+  @Prop() private name!: string;
+  @Prop() private email!: string;
 
-  // Todo - 4: Define a function using the @Emit decorator. The name of the output event should be `edit`
-  //           The function name is up to you. (A good name is `editUser`)
-  //           The function should return the id of the user in order to emit it to the parent component
+  @Emit('edit')
+  private editUser(): number {
+    return this.id;
+  }
 }
 </script>
 

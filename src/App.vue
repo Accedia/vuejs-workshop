@@ -11,21 +11,24 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Todo - 1: Loop through each user using for key the id of the user (v-for for UserDetails component) -->
-        <!-- Todo - 2: Add the following input bindings to the UserDetails component: id, email, name -->
-        <!--           Hint: use either `v-bind:` or `:` -->
-        <!-- Todo - 7: Add event listener for the `edit` event and pass the recently created function `selectUserForEdit` as reference. -->
-        <!--           Hint: user either `v-on:` or `@` -->
-        <UserDetails />
+        <UserDetails
+          v-for="user in users"
+          :key="user.id"
+          :id="user.id"
+          :name="user.name"
+          :email="user.email"
+          @edit="selectUserForEdit"
+        />
       </tbody>
     </table>
 
-    <!-- Todo - 8: Add the following input bindings to the EditUserForm component: id, email, name -->
-    <!--           Hint: user either `v-bind:` or `:` -->
-    <!-- Todo - 16: Add an `save` event listener passing as reference the `editUserDetails` function -->
-    <!-- Todo - 17: Add an `cancel` event listener passing as reference the `cancelEdit` function -->
     <EditUserForm
-      v-if="selectedUserId !== null"
+      v-if="selectedUserForEdit !== null"
+      :id="selectedUserForEdit.id"
+      :name="selectedUserForEdit.name"
+      :email="selectedUserForEdit.email"
+      @save="editUserDetails"
+      @cancel="cancelEdit"
     />
   </div>
 </template>
@@ -47,19 +50,17 @@ export default class App extends Vue {
   private users: User[] = [];
   private selectedUserForEdit: User | null = null;
 
-  /**
-   * Todo - 0: Use the Vue lifecycle hook `mounted` to initialize the `users` variable
-   *           Use the already imported list
-   */
+  private mounted() {
+    this.users = users;
+  }
 
-  /**
-   * Todo - 6: Create a function `selectUserForEdit`, that will receive the user id as param
-   *    This function should find the user with that id and save it in `this.selectedUserForEdit`
-   *    Hint: Use .find function of ES6
-   */
+  private selectUserForEdit(id: number) {
+    const foundUser = this.users.find((user) => user.id === id);
+    this.selectedUserForEdit = (foundUser) ? foundUser : null;
+  }
 
   private editUserDetails(updatedUser: User) {
-    this.users = this.users.map(user => (user.id === updatedUser.id) ? updatedUser : user);
+    this.users = this.users.map((user) => (user.id === updatedUser.id) ? updatedUser : user);
   }
 
   private cancelEdit() {
