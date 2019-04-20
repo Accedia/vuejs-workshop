@@ -12,16 +12,16 @@ This repository contains all the demos and tasks that were used during the Vue.j
 - [Git and Git Bash](https://git-scm.com/downloads)
 - [Vue Cli 3](https://cli.vuejs.org/guide/installation.html)
 - Text Editor or IDE like: _Visual Studio Code / Sublime / Atom / WebStorm_.
-(Throughout the course we are going to use only *Visual Studio Code*)
+(Throughout the course we are going to use only _Visual Studio Code_)
 
 ## Tasks
 ### Task 1
 Using the already installed Vue Cli, create a new project using the following requirements:
 - Name: **first-vue-project**
 - Custom configuration
--- Babel
--- Typescript
--- TSLint
+  - Babel
+  - Typescript
+  - TSLint
 - Serve the created project and open it in the browser
 - Build the project
 
