@@ -30,8 +30,8 @@ import { User } from '../data/User';
 
 @Component
 export default class EditUserForm extends Vue {
-  private nameCopy: string = '';
-  private emailCopy: string = '';
+  private editedName: string = '';
+  private editedEmail: string = '';
 
   // Todo - 9: Use @Prop to define the input props for this component: id (number), name (string) and email (string)
 
@@ -44,12 +44,12 @@ export default class EditUserForm extends Vue {
    */
   @Watch('name', { immediate: true })
   private nameChanged(newValue: string) {
-    this.nameCopy = newValue;
+    this.editedName = newValue;
   }
 
   @Watch('email', { immediate: true })
   private emailChanged(newValue: string) {
-    this.emailCopy = newValue;
+    this.editedEmail = newValue;
   }
 
   // Todo - 12: Define a function using the @Emit decorator. The name of the output event should be `save`
