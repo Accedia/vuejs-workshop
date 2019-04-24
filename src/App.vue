@@ -25,7 +25,7 @@
     <!-- Todo - 16: Add an `save` event listener passing as reference the `editUserDetails` function -->
     <!-- Todo - 17: Add an `cancel` event listener passing as reference the `cancelEdit` function -->
     <EditUserForm
-      v-if="selectedUserId !== null"
+      v-if="selectedUserForEdit !== null"
     />
   </div>
 </template>
