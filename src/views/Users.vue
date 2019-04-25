@@ -34,6 +34,7 @@
 import { Vue, Component } from 'vue-property-decorator';
 import { User } from '../models/User';
 import { UserService } from '../services/UserService';
+import { Inject } from 'vue-typedi';
 
 @Component
 export default class UsersComponent extends Vue {

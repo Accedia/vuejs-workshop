@@ -22,6 +22,7 @@ import { Post } from '@/models/Post';
 import { PostService } from '../services/PostService';
 import { User } from '../models/User';
 import { UserService } from '../services/UserService';
+import { Inject } from 'vue-typedi';
 
 @Component
 export default class PostsComponent extends Vue {
