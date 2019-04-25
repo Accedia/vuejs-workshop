@@ -5,10 +5,14 @@
         <!-- TODO - 14: Display the username of the current user -->
       </span>
     </h1>
-    <!-- TODO - 15: Create a link to the user list page -->
+    <!-- TODO - 15: Create a link to the user list page 
+      Use <router-link to="..."></router-link>
+    -->
 
     <!-- TODO - 16: Add an article for each post. 
-      Display the post title and post body -->
+      Display the post title and post body.
+      Use v-for.
+    -->
     <article>
       <header></header>
       <section></section>
@@ -36,8 +40,10 @@ export default class PostsComponent extends Vue {
   public mounted(): void {
 
     // TODO - 12: Retrieve all the posts for the current user
+    // and assign the `posts` field to the result
 
     // TODO - 13: Retrieve the details of the current user
+    // and assign the `user` field to the result
   }
 }
 </script>

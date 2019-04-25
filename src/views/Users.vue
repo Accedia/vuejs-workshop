@@ -15,6 +15,7 @@
           1. Name
           2. Username
           3. Email
+          Use v-for.
          -->
         <tr>
           <td></td>
@@ -22,7 +23,10 @@
           <td></td>
           <td>
             <!-- TODO - 10: Add a link to the page displaying all the posts
-              for the current user -->
+              for the current user.
+              Use <router-link></router-link>. Pass params the following way:
+                    :to="{ name: '...', params: {...} }"
+            -->
           </td>
         </tr>
       </tbody>
@@ -45,6 +49,7 @@ export default class UsersComponent extends Vue {
 
   public mounted(): void {
     // TODO - 8: Retrieve all users
+    // and assign the `users` field to the result
   }
 }
 </script>
