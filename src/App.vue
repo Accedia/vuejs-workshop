@@ -11,7 +11,7 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Todo - 1: Loop through each user using for key the id of the user (v-for for UserDetails component) -->
+        <!-- Todo - 1.2: Loop through each user using for key the id of the user (v-for for UserDetails component) -->
         <!-- Todo - 2: Add the following input bindings to the UserDetails component: id, email, name -->
         <!--           Hint: use either `v-bind:` or `:` -->
         <!-- Todo - 7: Add event listener for the `edit` event and pass the recently created function `selectUserForEdit` as reference. -->
@@ -48,7 +48,7 @@ export default class App extends Vue {
   private selectedUserForEdit: User | null = null;
 
   /**
-   * Todo - 0: Use the Vue lifecycle hook `mounted` to initialize the `users` variable
+   * Todo - 1.1: Use the Vue lifecycle hook `mounted` to initialize the `users` variable
    *           Use the already imported list
    */
 
